@@ -37,13 +37,3 @@ Quoted report name: trip_report.csv
 py -3.10 -m unittest discover -s tests
 ```
 
-## Intentional Legacy APIs
-
-These files intentionally use APIs that should be migrated for newer Python
-versions:
-
-- `setup.py` uses `distutils.core.setup`
-- `trip_planner/versioning.py` uses `distutils.version.LooseVersion`
-- `trip_planner/settings.py` uses `configparser.SafeConfigParser`
-- `trip_planner/plugin_loader.py` uses `imp.load_source`
-- `trip_planner/shell_format.py` uses `pipes.quote`
